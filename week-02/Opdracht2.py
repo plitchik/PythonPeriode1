@@ -12,7 +12,12 @@
 #
 # Test je programma daarna met verschillende waardes voor age.
 
+age=18 
 
+if age >= 18:
+    print("Je bent volwassen")
+else:
+    print("Je bent nog geen 18")
 
 # Opdracht 2 - Voldoende of onvoldoende
 #
@@ -29,7 +34,12 @@
 #
 # Test je programma met verschillende cijfers.
 
+cijfer=5
 
+if cijfer >=5.5:
+    print("Je hebt een voldoende!")
+else:
+    print("Je hebt een onvoldoende.")
 
 # Opdracht 3 - Cijfer beoordelen
 #
@@ -51,6 +61,13 @@
 # 6
 # 9
 
+cijfer=8
+if cijfer<5.5:
+    print("onvoldoende")
+elif cijfer>=8:
+    print("goed gedaan!")
+else:
+    print("voldoende")
 
 
 # Opdracht 4 - Game Character
@@ -73,7 +90,16 @@
 # Als dit zo is:
 # Print "Je hebt een schild!"
 
+health = 75
+has_shield = True
 
+if health >= 50:
+    print("Je hebt genoeg health.")
+else:
+    print("Je hebt weinig health!")
+
+if has_shield:
+    print("Je hebt een schild!")
 
 # Opdracht 5 - Mag je naar binnen?
 #
@@ -97,6 +123,14 @@
 #
 # Test daarna wat er gebeurt als je de waardes verandert.
 
+age = 20
+has_ticket = True
+
+if age >=18 and has_ticket is True:
+    print("Je mag naar binen!")
+else:
+    print("Je mag niet naar binen!")
+
 
 
 # Opdracht 6 - Tellen
@@ -113,7 +147,8 @@
 # 10
 #
 # Gebruik hiervoor range().
-
+for i in range(1,11):
+    print(i)
 
 
 # Opdracht 7 - Tafel van 5
@@ -130,7 +165,8 @@
 #
 # Gebruik de variabele uit je for-loop
 # om de berekening te maken.
-
+for i in range(1,11):
+    print(i, "x 5 =", i * 5)
 
 
 # Opdracht 8 - Countdown
@@ -157,7 +193,12 @@
 # 2
 # 1
 # GO!
+countdown = 10
+while countdown > 0:
+    print (countdown)
+    countdown -= 1
 
+print("GO!")
 
 
 # Opdracht 9 - Health verliezen
@@ -179,7 +220,11 @@
 # Health: 40
 # Health: 20
 # Health: 0
-
+health = 100
+for i in range(5):
+    health-=20
+    print("Health:", health)
+    
 
 
 # Opdracht 10 - Even of oneven
@@ -203,7 +248,12 @@
 #
 # Bijvoorbeeld:
 # 4 % 2 == 0
-
+for i in range(1,11):
+    if i % 2 == 0:
+        print(i, "is even")
+    else:
+        print(i, "is oneven")
+    
 
 
 # Opdracht 11 - Vijanden verslaan - BONUS
