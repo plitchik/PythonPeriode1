@@ -8,7 +8,54 @@
 # - Een variabele voor de naam van de speler
 # - Een variabele voor het gekozen wapen
 # - Een variabele voor de damage van het wapen
-#
+
+
+"""
+Ik besloot deze code zelf te schrijven,
+ik heb hem zelf ontwikkeld met behulp van AI
+puur om iets nieuws te leren en het te kunnen gebruiken.
+"""
+
+speler=input('Wat is your name?')
+
+#alle beschikbare wapens
+wapen={
+    'knife': 20,
+    'gun': 50,
+    'stone': 5
+}
+all_wapen=list(wapen.keys())
+
+#Een while wordt gebruikt om de keuze in de toekomst te bevestigen.
+while True:
+    print("beschikbare een wapen -", ", " .join(all_wapen))
+    wapen_kiezen=input("Kiez een wapen: ").lower()
+
+    match wapen_kiezen:
+        case "knife":
+            print("interessante keuze, knife heeft",wapen[wapen_kiezen],"beschadigingen.")
+        case "gun":
+            print("prachtige keuze, gun heeft",wapen[wapen_kiezen],"beschadigingen.")
+        case "stone":
+            print(".... stone heeft", wapen[wapen_kiezen],'beschadigingen.')
+        case _:
+            print("Dit wapen bestaat niet!")
+            continue
+
+    bevestiging=input("Weet je zeker dat je dit wapen wilt kiezen? (ja/nee): ").lower()
+    
+    if bevestiging == "ja":
+        print("Speler:",speler)
+        print('Wapen:',wapen_kiezen)
+        print('Damage:',wapen[wapen_kiezen])
+        break
+    elif bevestiging =="nee":
+        print("Kiez op niuwe")
+
+
+
+
+
 # Geef de speler zelf een naam en kies alvast een wapen.
 #
 # LET OP:
